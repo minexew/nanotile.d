@@ -910,7 +910,7 @@ public:
             // how many bytes from current pos till the end of this span?
             immutable uint64_t maxRemainingBytesInSpan = curr_span.sect_count * mf.sectorSize - curr_span_pos;
     
-            immutable uint64_t newLength = max!uint64_t(length, pos + count);
+            immutable uint64_t newLength = max(length, pos + count);
     
             // are there/will there be any more spans beyond this one? if so, last 8 bytes are used for chaining
             immutable int64_t remainingBytesInSpan = maxRemainingBytesInSpan

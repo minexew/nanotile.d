@@ -50,9 +50,9 @@ class Camera {
     {
         immutable vec3 cam = eye - center;
     
-        dist = length( cam );
+        dist = cam.length;
         angle = atan2( -cam.y, cam.x );
-        angle2 = atan2( cam.z, length( vec2( cam ) ) );
+        angle2 = atan2( cam.z, vec2( cam ).length );
     }
 
     void buildModelView()
@@ -60,12 +60,12 @@ class Camera {
         modelView = lookAtMatrix( vec3( eye.x, -eye.y, eye.z ), vec3( center.x, -center.y, center.z ),
                 vec3( up.x, -up.y, up.z ) );
 
-        modelView = scale( modelView, vec3( 1.0f, -1.0f, 1.0f ) );
+        modelView = modelView * scaleMatrix( vec3( 1.0f, -1.0f, 1.0f ) );
     }
     
     float cameraGetDistance()
     {
-        return length( eye - center );
+        return ( eye - center ).length;
     }
     
     void cameraMove( const ref vec3 vec )

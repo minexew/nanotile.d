@@ -29,10 +29,10 @@ module minexewgames.framework.stream;
 public import dlib.core.stream;
 
 import std.stdint;
-import std.stream;
+import undead.stream;
 
 class StdStreamWrapper : minexewgames.framework.stream.IOStream {
-    this(std.stream.Stream input) {
+    this(undead.stream.Stream input) {
         this.input = input;
     }
     
@@ -75,7 +75,7 @@ class StdStreamWrapper : minexewgames.framework.stream.IOStream {
         return input.size();
     }
     
-    std.stream.Stream input;
+    undead.stream.Stream input;
 }
 
 interface OpenFile {
@@ -86,15 +86,15 @@ class StdOpenFile : OpenFile {
     IOStream openFile(string fileName, bool readOnly, bool create) {
         try {
             if (create)
-                return new StdStreamWrapper(new std.stream.File(fileName, FileMode.In | FileMode.OutNew));
+                return new StdStreamWrapper(new undead.stream.File(fileName, FileMode.In | FileMode.OutNew));
             else if (!readOnly) {
                 // will throw if doesn't exist
-                new std.stream.File(fileName, FileMode.In).close();
+                new undead.stream.File(fileName, FileMode.In).close();
 
-                return new StdStreamWrapper(new std.stream.File(fileName, FileMode.In | FileMode.Out));
+                return new StdStreamWrapper(new undead.stream.File(fileName, FileMode.In | FileMode.Out));
             }
             else
-                return new StdStreamWrapper(new std.stream.File(fileName, FileMode.In));
+                return new StdStreamWrapper(new undead.stream.File(fileName, FileMode.In));
         } catch (Exception ex) {
             return null;
         }

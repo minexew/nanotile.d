@@ -4,7 +4,7 @@ import minexewgames.framework.stream;
 import minexewgames.framework.MediaFile;
 
 import std.file;
-import std.stream : File;
+import undead.stream : File;
 
 class FileSystem {
 	InputStream openInput(string fileName) {

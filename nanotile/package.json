@@ -7,9 +7,10 @@
         "minexew"
     ],
     "dependencies": {
-        "dlib": "~master",
-        "derelict-gl3": "~master",
-        "derelict-sdl2": "~master",
+        "dlib": "0.10.1",
+        "derelict-gl3": "1.0.0",
+        "derelict-sdl2": "1.0.0",
+        "derelict-util": "2.0.0",
         "minexewgames-engine-public": "~master"
     },
     "targetType": "executable",

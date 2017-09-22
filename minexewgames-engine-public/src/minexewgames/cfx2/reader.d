@@ -31,7 +31,7 @@ import minexewgames.cfx2.node;
 
 import minexewgames.framework.stream;
 
-import std.stream;
+import undead.stream;
 
 class Parser {
     this(Lexer lexer) {
@@ -181,7 +181,7 @@ class Parser {
 
 class Reader {
     static Node loadDocument(string fileName) {
-        auto stream = new StdStreamWrapper(new std.stream.File(fileName));
+        auto stream = new StdStreamWrapper(new undead.stream.File(fileName));
         return loadDocument(fileName, stream);
     }
     
