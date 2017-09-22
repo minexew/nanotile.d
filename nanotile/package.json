@@ -1,0 +1,18 @@
+{
+    "name": "nanotile",
+    "description": "Nanotile: Quest of Kyria",
+    "homepage": "",
+    "copyright": "Copyright © 2014, Minexew Games",
+    "authors": [
+        "minexew"
+    ],
+    "dependencies": {
+        "dlib": "~master",
+        "derelict-gl3": "~master",
+        "derelict-sdl2": "~master",
+        "minexewgames-engine-public": "~master"
+    },
+    "targetType": "executable",
+    "targetPath": "app/win32",
+    "workingDirectory": "app"
+}

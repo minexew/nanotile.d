@@ -1,0 +1,12 @@
+{
+    "name": "zmftool",
+    "description": "Zombie Media File manipulation utility",
+    "homepage": "https://github.com/minexew/minexewgames-engine-public",
+    "copyright": "Copyright © 2014 Minexew Games",
+    "authors": [
+        "Martin Cejp",
+    ],
+    "dependencies": {
+        "minexewgames-engine-public": "~master"
+    }
+}

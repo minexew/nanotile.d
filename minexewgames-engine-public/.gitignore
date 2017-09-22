@@ -1,0 +1,5 @@
+*.a
+*.exe
+*.lib
+*.rf
+_test.zmf

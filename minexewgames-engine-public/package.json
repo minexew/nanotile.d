@@ -1,0 +1,29 @@
+{
+    "name": "minexewgames-engine-public",
+    "description": "Public modules of Minexew Games Engine",
+    "homepage": "https://github.com/minexew/minexewgames-engine-public",
+    "copyright": "Copyright © 2014 Minexew Games",
+    "authors": [
+        "minexew",
+        "Danol"
+    ],
+    "dependencies": {
+        "dlib": "~master"
+    },
+    "subConfigurations": {
+        "dlibnot": "import"
+    },
+    "configurations": [
+        {
+            "name": "library",
+            "targetType": "library",
+            "sourcePaths": ["src"]
+        },
+        {
+            "name": "import",
+            "targetType": "sourceLibrary",
+            "sourceFiles-posix": ["libminexewgames-engine-public.a"],
+            "sourceFiles-windows": ["minexewgames-engine-public.lib"]
+        }
+    ]
+}
