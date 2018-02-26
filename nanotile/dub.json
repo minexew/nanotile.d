@@ -11,7 +11,7 @@
         "derelict-gl3": "1.0.0",
         "derelict-sdl2": "1.0.0",
         "derelict-util": "2.0.0",
-        "minexewgames-engine-public": "~master"
+        "minexewgames-engine-public": {"path": "../minexewgames-engine-public"}
     },
     "targetType": "executable",
     "targetPath": "app/win32",
